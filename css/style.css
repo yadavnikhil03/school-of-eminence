@@ -98,6 +98,9 @@ img {
   display: block;
 }
 
+/* Complete responsive design system for School of Eminence */
+
+/* Base responsive container */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -177,7 +180,7 @@ img {
 /* Theme Toggle */
 .theme-toggle {
   position: fixed;
-  top: 20px;
+  top: 30px; /* Changed from 20px to 30px to move it lower */
   right: 20px;
   z-index: 1000;
 }
@@ -268,6 +271,8 @@ img {
   box-shadow: var(--shadow-sm);
   z-index: 100;
   transition: all var(--transition-normal);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 [data-theme="dark"] .header {
@@ -284,6 +289,21 @@ img {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
+  transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+  will-change: transform, background-color;
+}
+
+/* Fix for navbar background color in dark mode */
+.navbar-scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow-md);
+}
+
+/* Dark mode specific override with higher specificity */
+[data-theme="dark"] .navbar-scrolled,
+[data-theme="dark"] .header.scrolled,
+[data-theme="dark"] .navbar.scrolled {
+  background-color: rgba(17, 24, 39, 0.95) !important; /* Dark background in dark mode */
 }
 
 .logo {
@@ -401,8 +421,8 @@ img {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 650px;
-  margin-left: 8%; /* Push content to the left side */
+  max-width: 90%;
+  margin: 0 auto;
   padding: 2rem;
   border-radius: 20px;
   background: rgba(0,0,0,0.4); /* Semi-transparent background without blur */
@@ -410,6 +430,12 @@ img {
   box-shadow: 0 8px 32px rgba(0,0,0,0.1);
   animation: fadeInAndOut 5s forwards; /* Shortened to 5 seconds total */
   opacity: 0;
+  text-align: center;
+}
+
+/* Fix for hero title text breaking */
+.hero-content h1 {
+  white-space: nowrap; /* Prevents text from breaking across lines */
 }
 
 /* Animation for hero content to fade in and then out - shorter duration */
@@ -452,6 +478,104 @@ img {
   font-size: 2.2rem !important; /* Larger subheading */
   font-weight: 600;
   margin-bottom: 1rem;
+}
+
+/* For smaller screens, scale the text instead of wrapping */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem; /* Smaller text on mobile */
+    white-space: normal; /* Allow wrapping on very small screens */
+    hyphens: manual; /* Control where hyphenation happens */
+  }
+  
+  .hero-content h2 {
+    font-size: 1.3rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  /* Better positioning for theme toggle */
+  .theme-toggle {
+    position: fixed;
+    top: 25px; /* Adjusted to match navbar height better */
+    right: 20px;
+  }
+}
+
+/* Fix for mobile hero text breaking - overrides previous conflicting styles */
+@media (max-width: 768px) {
+  .hero-content {
+    width: 95%; /* Wider container */
+    padding: 1.5rem 1rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 1.8rem !important; /* Smaller text to fit on one line */
+    word-wrap: normal !important; /* Don't break words */
+    white-space: normal !important;
+    word-break: keep-all !important; /* Prevent breaking within words */
+    overflow-wrap: break-word;
+    line-height: 1.2;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 380px) {
+  .hero-content h1 {
+    font-size: 1.5rem !important; /* Even smaller for tiny phones */
+  }
+  
+  .hero-content h2 {
+    font-size: 1rem !important;
+  }
+}
+
+/* Mobile-specific theme toggle position */
+@media (max-width: 768px) {
+  /* This rule will override all others due to !important */
+  .theme-toggle {
+    position: fixed !important;
+    top: 35px !important; /* Lower position */
+    right: 15px !important;
+    z-index: 101 !important;
+  }
+  
+  /* Make toggle button easier to tap */
+  .toggle-label {
+    width: 45px;
+    height: 25px;
+  }
+  
+  /* Make the toggle ball responsive */
+  .toggle-ball {
+    width: 21px;
+    height: 21px;
+  }
+  
+  /* Adjust hamburger menu for proper alignment with toggle */
+  .nav-toggle {
+    position: relative;
+    z-index: 102;
+    margin-right: 55px;
+    margin-top: 3px;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-content h2 {
+    font-size: 1.2rem !important;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
 }
 
 /* Fix video controls positioning and visibility */
@@ -1301,11 +1425,17 @@ img {
   }
   
   .hero-content h1 {
-    font-size: 2.5rem !important;
+    font-size: 2.2rem; /* Smaller text on mobile */
+    white-space: normal; /* Allow wrapping on very small screens */
+    hyphens: manual; /* Control where hyphenation happens */
   }
   
   .hero-content h2 {
-    font-size: 1.5rem !important;
+    font-size: 1.3rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
   }
   
   .hero-buttons {
@@ -1347,11 +1477,15 @@ img {
 /* Even smaller screens */
 @media (max-width: 480px) {
   .hero-content h1 {
-    font-size: 2rem !important;
+    font-size: 1.8rem;
   }
   
   .hero-content h2 {
     font-size: 1.2rem !important;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
   }
 }
 
@@ -1747,11 +1881,17 @@ img {
   }
 
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem; /* Smaller text on mobile */
+    white-space: normal; /* Allow wrapping on very small screens */
+    hyphens: manual; /* Control where hyphenation happens */
   }
 
   .hero-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
   }
 
   .gallery-wrapper {
@@ -1765,6 +1905,221 @@ img {
   .admissions-info p {
     font-size: 1rem;
   }
+
+  /* Fix theme toggle and hamburger alignment on mobile */
+  .theme-toggle {
+    position: fixed;
+    top: 20px; /* Match the navbar height */
+    right: 20px;
+    z-index: 101;
+  }
+  
+  /* Make toggle slightly smaller on mobile */
+  .toggle-label {
+    width: 45px;
+    height: 24px;
+  }
+  
+  .toggle-ball {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Adjust hamburger menu position */
+  .nav-toggle {
+    position: relative;
+    z-index: 102;
+    margin-left: auto;
+    margin-right: 55px; /* Space for theme toggle */
+  }
+  
+  /* Make navbar flex container to help with alignment */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+  }
+  
+  /* Logo sizing adjustment */
+  .logo img {
+    width: 40px;
+    height: auto;
+  }
+}
+
+/* Mobile Optimization for School of Eminence Website */
+
+/* Improved Hero Section Mobile Styling */
+@media (max-width: 768px) {
+  /* Better hero content container */
+  .hero-content {
+    margin: 0 auto;
+    width: 90%;
+    padding: 1.5rem;
+    background: rgba(0,0,0,0.6); /* Darker background for better readability */
+  }
+  
+  /* Better text sizing and no text break */
+  .hero-content h1 {
+    font-size: 2rem !important;
+    white-space: normal !important; /* Override the nowrap */
+    word-break: break-word;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content h2 {
+    font-size: 1.2rem !important;
+    line-height: 1.3;
+  }
+  
+  /* Fix button alignment */
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  /* Navbar and theme toggle fixes */
+  .header {
+    padding: 8px 0;
+  }
+  
+  .logo img {
+    width: 40px;
+    height: auto;
+  }
+  
+  .logo-text h1 {
+    font-size: 1.2rem;
+  }
+  
+  /* Fix hamburger menu position */
+  .nav-toggle {
+    margin-right: 60px; /* Make space for theme toggle */
+    z-index: 102;
+  }
+  
+  /* Move theme toggle to top right without overlapping */
+  .theme-toggle {
+    top: 15px;
+    right: 15px;
+    z-index: 101;
+  }
+  
+  .toggle-label {
+    width: 50px;
+    height: 26px;
+  }
+  
+  /* Ensure hamburger menu opens properly */
+  .nav-menu {
+    top: 60px;
+    height: calc(100vh - 60px);
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding-top: 20px;
+  }
+  
+  .nav-item {
+    margin: 0 0 15px 0;
+  }
+  
+  .nav-link {
+    font-size: 1.1rem;
+    padding: 10px 0;
+    display: block;
+  }
+  
+  /* Fix section spacing on mobile */
+  .section-padding {
+    padding: 40px 0;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Smaller phones optimization */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.6rem !important;
+  }
+  
+  .hero-content h2 {
+    font-size: 1rem !important;
+  }
+  
+  /* Single column layouts for small screens */
+  .about-features,
+  .programs-container,
+  .achievements-container,
+  .faculty-cards,
+  .events-container,
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Adjust card widths */
+  .achievement-item,
+  .program-card,
+  .faculty-card,
+  .event-card {
+    width: 100%;
+    margin: 0 auto 15px;
+  }
+  
+  /* Full width contact form */
+  .contact-container {
+    display: block;
+  }
+  
+  .contact-form {
+    margin-top: 30px;
+  }
+  
+  /* Better font sizes for small screens */
+  body {
+    font-size: 15px;
+  }
+  
+  /* Fix modal for small screens */
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+  }
+  
+  /* Fix video controls positioning */
+  .video-controls {
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .video-control-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Fix for chat assistant on mobile */
+@media (max-width: 768px) {
+  .chat-assistant {
+    width: 90%;
+    height: 60vh;
+    bottom: 20px;
+    right: 5%;
+  }
+  
+  .chat-toggle {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1774,7 +2129,15 @@ img {
   }
 
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.2rem !important;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
   }
 
   .section-header h2 {

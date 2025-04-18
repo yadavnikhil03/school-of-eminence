@@ -1,0 +1,144 @@
+/* Enhanced animations for School of Eminence */
+
+/* Base animation classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.rotate-in {
+  opacity: 0;
+  transform: rotate(-10deg) scale(0.8);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* New animation classes */
+.bounce-in {
+  opacity: 0;
+  transform: scale(0.3);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.flip-in {
+  opacity: 0;
+  transform: perspective(400px) rotateY(90deg);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Active state for all animations */
+.fade-in.active,
+.slide-in-left.active,
+.slide-in-right.active,
+.scale-in.active,
+.rotate-in.active,
+.bounce-in.active,
+.flip-in.active {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1) rotate(0deg);
+}
+
+/* Button ripple effect */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Navbar scroll effect */
+.navbar {
+  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-scrolled {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: var(--shadow-md);
+}
+
+/* Text animation */
+.text-animation-wrapper {
+  display: inline-block;
+}
+
+.animated-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: letterAppear 0.5s forwards;
+}
+
+@keyframes letterAppear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced hover animations */
+.card, .facility-item, .team-member, .achievement-item {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              box-shadow 0.4s ease;
+}
+
+.social-icon:hover {
+  animation: pulse 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Form input animations */
+.form-group {
+  position: relative;
+}
+
+.form-group.focused label,
+.form-group.filled label {
+  transform: translateY(-20px) scale(0.8);
+  color: var(--primary-color);
+}
+
+.form-group label {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  pointer-events: none;
+  transform-origin: left top;
+}
