@@ -1192,6 +1192,68 @@ img {
   .admissions-info p {
     font-size: 1rem;
   }
+  
+  .hero-content {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  .hero-content h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  /* Fix theme toggle and hamburger menu overlap */
+  .theme-toggle {
+    top: 70px; /* Move below the header */
+    right: 15px;
+    z-index: 99;
+  }
+  
+  /* Alternative positioning option */
+  /* Uncomment this and comment out the above if you prefer the theme toggle on the left */
+  /*
+  .theme-toggle {
+    top: 20px;
+    right: auto;
+    left: 15px;
+    z-index: 99;
+  }
+  */
+  
+  /* Make the header slightly taller to fit toggle button */
+  .header {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  
+  /* Make sure nav toggle is visible and properly positioned */
+  .nav-toggle {
+    position: relative;
+    z-index: 100;
+    margin-right: 10px;
+  }
+}
+
+/* Even smaller screens */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem !important;
+  }
+  
+  .hero-content h2 {
+    font-size: 1.2rem !important;
+  }
 }
 
 /* Academic Programs Section */
