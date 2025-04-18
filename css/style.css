@@ -42,7 +42,7 @@
   --transition-slow: 0.5s ease;
 }
 
-/* Enhance dark theme */
+/*  dark theme */
 [data-theme="dark"] {
   --primary-color: #4cc9f0;
   --secondary-color: #f72585;
@@ -98,8 +98,6 @@ img {
   display: block;
 }
 
-/* Complete responsive design system for School of Eminence */
-
 /* Base responsive container */
 .container {
   width: 100%;
@@ -134,7 +132,6 @@ img {
   margin-top: var(--spacing-xs);
 }
 
-/* Modern buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -180,7 +177,7 @@ img {
 /* Theme Toggle */
 .theme-toggle {
   position: fixed;
-  top: 30px; /* Changed from 20px to 30px to move it lower */
+  top: 30px; 
   right: 20px;
   z-index: 1000;
 }
@@ -382,7 +379,6 @@ img {
   transition: all var(--transition-normal);
 }
 
-/* Enhanced Hero Section - Better text visibility over video */
 .hero {
   position: relative;
   height: 100vh;
@@ -417,7 +413,7 @@ img {
   z-index: 1;
 }
 
-/* Ensure content is above overlay - removed blur effect */
+/* Ensure content is above overlay */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -433,12 +429,11 @@ img {
   text-align: center;
 }
 
-/* Fix for hero title text breaking */
 .hero-content h1 {
   white-space: nowrap; /* Prevents text from breaking across lines */
 }
 
-/* Animation for hero content to fade in and then out - shorter duration */
+/* Animation for hero content to fade in and then out*/
 @keyframes fadeInAndOut {
   0% {
     opacity: 0;
@@ -463,9 +458,8 @@ img {
   animation: fadeInAndOut 5s forwards;
 }
 
-/* ENHANCED TEXT SIZES */
 .hero-content h1 {
-  font-size: 3.8rem !important; /* Much larger heading */
+  font-size: 3.8rem !important; 
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 1.5rem;
@@ -475,7 +469,7 @@ img {
 }
 
 .hero-content h2 {
-  font-size: 2.2rem !important; /* Larger subheading */
+  font-size: 2.2rem !important; 
   font-weight: 600;
   margin-bottom: 1rem;
 }
@@ -483,8 +477,8 @@ img {
 /* For smaller screens, scale the text instead of wrapping */
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 2.2rem; /* Smaller text on mobile */
-    white-space: normal; /* Allow wrapping on very small screens */
+    font-size: 2.2rem; 
+    white-space: normal;
     hyphens: manual; /* Control where hyphenation happens */
   }
   
@@ -496,15 +490,14 @@ img {
     font-size: 1rem;
   }
 
-  /* Better positioning for theme toggle */
+
   .theme-toggle {
     position: fixed;
-    top: 25px; /* Adjusted to match navbar height better */
+    top: 25px;
     right: 20px;
   }
 }
 
-/* Fix for mobile hero text breaking - overrides previous conflicting styles */
 @media (max-width: 768px) {
   .hero-content {
     width: 95%; /* Wider container */
