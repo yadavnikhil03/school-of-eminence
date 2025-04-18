@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School of Eminence - Indrapuri, Ludhiana</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch">
+        <label for="theme-switch" class="toggle-label">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+            <div class="toggle-ball"></div>
+        </label>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="images/logo.png" alt="School of Eminence Logo">
+                    <div class="logo-text">
+                        <h1>School of Eminence</h1>
+                        <p>Excellence in Education</p>
+                    </div>
+                </div>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#achievements" class="nav-link">Achievements</a></li>
+                    <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="#events" class="nav-link">Events</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <!-- Add video background -->
+        <video class="hero-video" autoplay muted loop playsinline id="heroVideo">
+            <source src="images/main.mp4" type="video/mp4">
+            <!-- Fallback for browsers that don't support video -->
+            Your browser does not support HTML5 video.
+        </video>
+        
+        <div class="hero-content">
+            <h1 class="animated-text">Welcome to School of Eminence</h1>
+            <h2 class="animated-text-delay">Initiate - Innovate - Inspire</h2>
+            <p class="animated-text-delay-2">Indrapuri, Sector 32, Ludhiana, Punjab</p>
+            <div class="hero-buttons">
+                <a href="#about" class="btn btn-primary">Discover Our School</a>
+                <a href="#contact" class="btn btn-secondary">Reach Out to Us</a>
+            </div>
+        </div>
+        
+        <!-- Add video controls -->
+        <div class="video-controls">
+            <button class="video-control-btn" id="muteToggle" aria-label="Toggle sound">
+                <i class="fas fa-volume-mute" id="volumeIcon"></i>
+            </button>
+        </div>
+        
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Our School</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image fade-in slideshow-container">
+                    <div class="slideshow-inner">
+                        <div class="slideshow-slide active">
+                            <img src="images/front.avif" alt="School of Eminence Front Building">
+                        </div>
+                        <div class="slideshow-slide">
+                            <img src="images/back.webp" alt="School of Eminence Back View">
+                        </div>
+                        <div class="slideshow-slide">
+                            <img src="images/Top.jpg" alt="School of Eminence Aerial View">
+                        </div>
+                        <div class="slideshow-slide">
+                            <img src="images/classroom.avif" alt="Modern Classroom">
+                        </div>
+                        <div class="slideshow-slide">
+                            <img src="images/BasketBallGround.jpg" alt="Basketball Court">
+                        </div>
+                        <div class="slideshow-slide">
+                            <img src="images/Tenis.jpg" alt="Tennis Court">
+                        </div>
+                    </div>
+                    <div class="slideshow-dots"></div>
+                </div>
+                <div class="about-text fade-in">
+                    <h3>Excellence in Education Since 2023</h3>
+                    <p>School of Eminence (SOE) is a premier educational institution located in Indrapuri, Sector 32, Ludhiana. We are committed to providing quality education that nurtures intellectual, physical, and emotional growth of our students.</p>
+                    <p>Our state-of-the-art facilities and dedicated faculty ensure that students receive the best possible education in a supportive and stimulating environment.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h4>Quality Education</h4>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <h4>Expert Faculty</h4>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-microscope"></i>
+                            <h4>Modern Labs</h4>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-running"></i>
+                            <h4>Sports Facilities</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Achievements</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="achievements-container">
+                <div class="achievement-item" data-achievement="Academic Excellence">
+                    <div class="trophy">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Academic Excellence</h3>
+                    <p>100% pass rate for 5 consecutive years</p>
+                </div>
+                <div class="achievement-item" data-achievement="Sports Champions">
+                    <div class="trophy">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Sports Champions</h3>
+                    <p>District level champions in cricket and basketball</p>
+                </div>
+                <div class="achievement-item" data-achievement="Science Olympiad">
+                    <div class="trophy">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3>Science Olympiad</h3>
+                    <p>National level recognition in Science Olympiad</p>
+                </div>
+                <div class="achievement-item" data-achievement="Cultural Excellence">
+                    <div class="trophy">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Cultural Excellence</h3>
+                    <p>State level awards in dance and music competitions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Programs Section -->
+    <section id="academics" class="academics section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Academic Programs</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="programs-container">
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Primary Wing</h3>
+                    <p>Classes Nursery to 5</p>
+                    <ul class="program-features">
+                        <li><i class="fas fa-check"></i> Activity-based learning</li>
+                        <li><i class="fas fa-check"></i> Foundation building</li>
+                        <li><i class="fas fa-check"></i> Personal development</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h3>Middle Wing</h3>
+                    <p>Classes 6 to 8</p>
+                    <ul class="program-features">
+                        <li><i class="fas fa-check"></i> Subject specialization</li>
+                        <li><i class="fas fa-check"></i> Critical thinking</li>
+                        <li><i class="fas fa-check"></i> Personal development</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Section -->
+    <section id="faculty" class="faculty section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Faculty</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="faculty-intro">
+                <p class="intro-text">Our dedicated team of educators brings expertise, passion, and innovation to the classroom every day.</p>
+            </div>
+            
+            <div class="faculty-cards">
+                <div class="faculty-card">
+                    <div class="faculty-img">
+                        <img src="images/principal.jpg" alt="Principal">
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Mr. Jaswinder Singh</h3>
+                        <p class="designation">Principal</p>
+                        <p class="bio">With over 20 years of experience in education management and a Ph.D. in Educational Leadership.</p>
+                        <div class="faculty-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="far fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faculty-card">
+                    <div class="faculty-img">
+                        <img src="images/vice-principal.jpg" alt="Vice Principal">
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Gurmeet Kaur</h3>
+                        <p class="designation">Vice Principal</p>
+                        <p class="bio">Specialist in curriculum development with expertise in implementing innovative teaching methodologies.</p>
+                        <div class="faculty-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="far fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Section -->
+    <section id="admissions" class="admissions section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Admissions</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="admissions-content">
+                <div class="admissions-info fade-in">
+                    <h3>Join Our School Community</h3>
+                    <p>We welcome applications from motivated students seeking quality education in a nurturing environment.</p>
+                    
+                    <div class="process-steps">
+                        <div class="step">
+                            <div class="step-icon">
+                                <i class="fas fa-file-alt"></i>
+                                <span>1</span>
+                            </div>
+                            <h4>Application</h4>
+                            <p>Complete and submit the application form along with required documents.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-icon">
+                                <i class="fas fa-tasks"></i>
+                                <span>2</span>
+                            </div>
+                            <h4>Assessment</h4>
+                            <p>Students undergo an age-appropriate assessment to determine placement.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-icon">
+                                <i class="fas fa-comments"></i>
+                                <span>3</span>
+                            </div>
+                            <h4>Interview</h4>
+                            <p>Parents and students meet with admission coordinators.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section with new parent images -->
+    <section id="testimonials" class="testimonials section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Parents Say</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-item active">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>The teachers at School of Eminence have created such a positive environment for learning. My daughter has flourished academically and socially since joining.</p>
+                        <div class="testimonial-author">
+                            <img src="images/maa1.jpeg" alt="Parent">
+                            <div>
+                                <h4>Priya Sharma</h4>
+                                <p>Parent of Class 5 Student</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>The individual attention given to each student makes School of Eminence stand out. The teachers understand my child's strengths and areas for improvement.</p>
+                        <div class="testimonial-author">
+                            <img src="images/papa1.jpeg" alt="Parent">
+                            <div>
+                                <h4>Rajesh Kumar</h4>
+                                <p>Parent of Class 8 Student</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>We've seen tremendous growth in our son since he joined School of Eminence. The holistic approach to education has helped him develop both academically and personally.</p>
+                        <div class="testimonial-author">
+                            <img src="images/papa2.webp" alt="Parent">
+                            <div>
+                                <h4>Sunil Verma</h4>
+                                <p>Parent of Class 10 Student</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-controls">
+                <button class="prev-testimonial"><i class="fas fa-chevron-left"></i></button>
+                <div class="testimonial-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
+                <button class="next-testimonial"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>School Gallery</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="gallery-container">
+                <!-- Gallery Slides -->
+                <div class="gallery-wrapper">
+                    <div class="gallery-slide active">
+                        <img src="images/front.avif" alt="School Front View">
+                        <div class="gallery-caption">School Entrance</div>
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="images/back.webp" alt="School Back View">
+                        <div class="gallery-caption">Campus View</div>
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="images/Top.jpg" alt="Aerial View">
+                        <div class="gallery-caption">Aerial View of Campus</div>
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="images/classroom.avif" alt="Modern Classroom">
+                        <div class="gallery-caption">Modern Classrooms</div>
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="images/BasketBallGround.jpg" alt="Basketball Court">
+                        <div class="gallery-caption">Basketball Facilities</div>
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="images/Tenis.jpg" alt="Tennis Court">
+                        <div class="gallery-caption">Tennis Court</div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Controls -->
+                <button id="prevBtn" class="gallery-nav prev-btn" aria-label="Previous image">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="nextBtn" class="gallery-nav next-btn" aria-label="Next image">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <!-- Gallery Dots -->
+                <div class="gallery-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                    <span class="dot" data-index="3"></span>
+                    <span class="dot" data-index="4"></span>
+                    <span class="dot" data-index="5"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Upcoming Events</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="events-container">
+                <div class="event-card" data-event="Annual Day Celebration">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">May</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Annual Day Celebration</h3>
+                        <p class="event-time"><i class="far fa-clock"></i> 10:00 AM - 3:00 PM</p>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> School Auditorium</p>
+                        <p class="event-description">Join us for a day of performances, awards, and celebrations as we commemorate another successful academic year.</p>
+                    </div>
+                </div>
+                <div class="event-card" data-event="Science Exhibition">
+                    <div class="event-date">
+                        <span class="day">22</span>
+                        <span class="month">May</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Science Exhibition</h3>
+                        <p class="event-time"><i class="far fa-clock"></i> 9:00 AM - 1:00 PM</p>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Science Block</p>
+                        <p class="event-description">Students showcase their innovative science projects and experiments in this annual exhibition.</p>
+                    </div>
+                </div>
+                <div class="event-card" data-event="Parent-Teacher Meeting">
+                    <div class="event-date">
+                        <span class="day">05</span>
+                        <span class="month">Jun</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Parent-Teacher Meeting</h3>
+                        <p class="event-time"><i class="far fa-clock"></i> 10:00 AM - 2:00 PM</p>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Respective Classrooms</p>
+                        <p class="event-description">An opportunity for parents to discuss their child's progress with teachers and address any concerns.</p>
+                    </div>
+                </div>
+                <div class="event-card" data-event="Sports Day">
+                    <div class="event-date">
+                        <span class="day">12</span>
+                        <span class="month">Jun</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Annual Sports Day</h3>
+                        <p class="event-time"><i class="far fa-clock"></i> 8:00 AM - 4:00 PM</p>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> School Playground</p>
+                        <p class="event-description">A day of athletic competitions, team sports, and physical activities for students of all ages.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Address</h3>
+                            <p>School of Eminence, Indrapuri, Sector 32, Ludhiana, Punjab, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+91 98765 43210</p>
+                            <p>+91 12345 67890</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@schoolofeminence.edu.in</p>
+                            <p>admissions@schoolofeminence.edu.in</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Office Hours</h3>
+                            <p>Monday - Friday: 8:00 AM - 4:00 PM</p>
+                            <p>Saturday: 8:00 AM - 12:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <span class="form-error" id="nameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <span class="form-error" id="emailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                            <span class="form-error" id="phoneError"></span>
+                        </div>
+                        <div class="form-group">
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected>Select Subject</option>
+                                <option value="admission">Admission Inquiry</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="complaint">Complaint</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span class="form-error" id="subjectError"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                            <span class="form-error" id="messageError"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="School of Eminence Logo">
+                    <h3>School of Eminence</h3>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#achievements">Achievements</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Subscribe to Newsletter</h4>
+                    <form id="newsletterForm">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 School of Eminence. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/building-slideshow.js"></script>
+    <script src="js/video-controls.js"></script>
+</body>
+</html>
