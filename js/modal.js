@@ -32,9 +32,9 @@ if (modalClose) {
 // Close modal when clicking outside
 window.addEventListener('click', (e) => {
     if (e.target === modal) {
-        closeModal();\
-    });
-}
+        closeModal();
+    }
+});
 
 // Close modal with Escape key
 document.addEventListener('keydown', (e) => {
